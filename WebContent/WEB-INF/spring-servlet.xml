@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC
+    "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/homePage" class="com.amsidh.controller.HomeController">
+		<property name="flightService" ref="flightService" />
+	</bean>
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename" value="views" />
+	</bean>
+</beans>
